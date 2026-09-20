@@ -1,0 +1,4 @@
+.volunteer-type-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+@media (max-width: 767px) {
+    .volunteer-types { grid-template-columns: 1fr !important; }
+}

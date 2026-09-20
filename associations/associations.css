@@ -1,0 +1,11 @@
+.exchange-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+@media (max-width: 767px) { .exchange-grid { grid-template-columns: 1fr; } }
+.resource-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 10px; margin-bottom: 0.8rem; border: 1px solid rgba(255,255,255,0.05); }
+.resource-info strong { display: block; color: #fff; }
+.resource-info small { color: #94a3b8; font-size: 0.85rem; }
+.resource-qty { font-weight: 800; color: #00f5a0; }
+.match-item { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem; background: rgba(0,245,160,0.05); border: 1px solid rgba(0,245,160,0.2); border-radius: 12px; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem; }
+.match-info { flex: 1; min-width: 200px; }
+.match-info strong { display: block; color: #fff; margin-bottom: 0.3rem; }
+.match-info small { color: #94a3b8; }
+.match-percent { background: #00f5a0; color: rgb(24,29,37); padding: 0.3rem 0.8rem; border-radius: 50px; font-weight: 800; font-size: 0.9rem; }

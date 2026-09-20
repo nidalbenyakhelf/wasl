@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#181d25">
+    <title>وصْل | جسر العطاء الذكي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="index/index.css" />
+</head>
+<body>
+
+<header>
+    <div class="btn-group-header">
+        <button data-toggle="profileList" aria-label="القائمة"><i class="fa fa-bars"></i></button>
+    </div>
+    <a href="index.html" class="mainLogo">
+        <img src="assets/logo.png" alt="وصْل">
+    </a>
+    
+    <div class="popup profileList">
+        <div class="header">
+            <img src="assets/logo.png" alt="وصْل">
+            <button class="btnClose" data-close><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="main">
+            <a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+            <a href="needy/needy.html"><i class="fa-solid fa-hand-holding-heart"></i> المحتاجين</a>
+            <a href="volunteers/volunteers.html"><i class="fa-solid fa-users"></i> المتطوعين</a>
+            <a href="associations/associations.html"><i class="fa-solid fa-building-ngo"></i> الجمعيات</a>
+            <a href="admin/admin.html"><i class="fa-solid fa-shield-halved"></i> الإدارة</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="hero-bg">
+        <video autoplay muted loop playsinline>
+            <source src="assets/hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+        <h1>منصة وصْل</h1>
+        <p>نربط الجمعيات بالمحتاجين والمتطوعين في شبكة ذكية واحدة. ننسّق التبرعات بين الجمعيات لتحسين التوزيع وتقليل الهدر، ونضمن وصول المساعدة لمستحقيها بشفافية كاملة.</p>
+        <div class="btns">
+            <a href="needy/needy.html" class="button primary-btn">أطلب مساعدة <i class="fa-solid fa-arrow-left"></i></a>
+            <a href="associations/associations.html" class="button">سجّل جمعيتك</a>
+            <a href="volunteers/volunteers.html" class="button">تطوّع معنا</a>
+        </div>
+        <div class="trust-indicators">
+            <div class="trust-item"><span class="trust-number" id="count1">0</span><span class="trust-label">مستفيد</span></div>
+            <div class="trust-divider"></div>
+            <div class="trust-item"><span class="trust-number" id="count2">0</span><span class="trust-label">متطوع</span></div>
+            <div class="trust-divider"></div>
+            <div class="trust-item"><span class="trust-number" id="count3">0</span><span class="trust-label">جمعية</span></div>
+        </div>
+    </div>
+
+    <div class="bottom-glow"></div>
+    <button class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">
+        <i class="fa-solid fa-chevron-down"></i>
+    </button>
+</main>
+
+<section id="about">
+    <div class="container">
+        <div class="section-header">
+            <h2>من نحن</h2>
+            <p>منصة شاملة تربط جميع أطراف العمل الخيري في الجزائر</p>
+        </div>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #cbd5e1; line-height: 1.9;">
+            <p style="margin-bottom: 1.5rem;">"منصة وصْل" هي شبكة ذكية تربط بين <strong style="color:#00f5a0;">الجمعيات الخيرية</strong>، <strong style="color:#00d9f5;">المحتاجين</strong>، و<strong style="color:#f97316;">المتطوعين</strong> في منظومة واحدة متكاملة.</p>
+            <p>نوفّر للجمعيات أداة تنسيق ذكية لتبادل الموارد الفائضة وتغطية احتياجات بعضها البعض، مما يحسّن توزيع التبرعات ويقلل الهدر إلى الصفر. في الوقت نفسه، نسهّل على المحتاجين طلب المساعدة، ونفتح للمتطوعين أبواب المشاركة الفعّالة.</p>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <div class="section-header">
+            <h2>كيف نخدم الجميع؟</h2>
+            <p>حلول متكاملة لكل طرف في منظومة العمل الخيري</p>
+        </div>
+        <div class="categories-grid">
+            <div class="category-card cat-green">
+                <i class="fa-solid fa-building-ngo card-bg-icon"></i>
+                <h3>للجمعيات</h3>
+                <small>تنسيق وتبادل موارد</small>
+            </div>
+            <div class="category-card cat-blue">
+                <i class="fa-solid fa-hand-holding-heart card-bg-icon"></i>
+                <h3>للمحتاجين</h3>
+                <small>طلب مساعدة بسهولة</small>
+            </div>
+            <div class="category-card cat-orange">
+                <i class="fa-solid fa-users card-bg-icon"></i>
+                <h3>للمتطوعين</h3>
+                <small>فرص تطوع متنوعة</small>
+            </div>
+            <div class="category-card cat-purple">
+                <i class="fa-solid fa-network-wired card-bg-icon"></i>
+                <h3>شبكة تنسيق</h3>
+                <small>ربط الجمعيات ببعضها</small>
+            </div>
+            <div class="category-card cat-teal">
+                <i class="fa-solid fa-chart-line card-bg-icon"></i>
+                <h3>توزيع ذكي</h3>
+                <small>تحسين توزيع التبرعات</small>
+            </div>
+            <div class="category-card cat-red">
+                <i class="fa-solid fa-shield-halved card-bg-icon"></i>
+                <h3>شفافية كاملة</h3>
+                <small>تتبع كل تبرع</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="how-it-works">
+    <div class="container">
+        <div class="section-header">
+            <h2>كيف تعمل المنصة؟</h2>
+            <p>أربع خطوات بسيطة من الطلب إلى الأثر</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+            <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.03); border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00f5a0, #00d9f5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: 800; color: rgb(24,29,37);">1</div>
+                <h3 style="color: #fff; margin-bottom: 0.75rem;">تسجيل الطلب</h3>
+                <p style="color: #94a3b8; font-size: 0.95rem;">المحتاج يسجّل طلبه، والجمعية تعلن عن فائض موارد</p>
+            </div>
+            <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.03); border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00f5a0, #00d9f5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: 800; color: rgb(24,29,37);">2</div>
+                <h3 style="color: #fff; margin-bottom: 0.75rem;">مطابقة ذكية</h3>
+                <p style="color: #94a3b8; font-size: 0.95rem;">النظام يربط الطلب بالجمعية أو المتطوع الأنسب</p>
+            </div>
+            <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.03); border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00f5a0, #00d9f5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: 800; color: rgb(24,29,37);">3</div>
+                <h3 style="color: #fff; margin-bottom: 0.75rem;">تنسيق وتوزيع</h3>
+                <p style="color: #94a3b8; font-size: 0.95rem;">الجمعيات تتنسّق والمتطوعون ينفّذون</p>
+            </div>
+            <div style="text-align: center; padding: 2rem; background: rgba(255,255,255,0.03); border-radius: 16px; border: 1px solid rgba(255,255,255,0.08);">
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00f5a0, #00d9f5); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; font-weight: 800; color: rgb(24,29,37);">4</div>
+                <h3 style="color: #fff; margin-bottom: 0.75rem;">تتبع الأثر</h3>
+                <p style="color: #94a3b8; font-size: 0.95rem;">كل تبرع موثّق وشفاف من البداية للنهاية</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-section" id="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2>قصص أثر</h2>
+            <p>شهادات من جميع أطراف المنصة</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                <p class="testimonial-text">منصة وصْل ساعدتنا في تنسيق التبرعات مع جمعيات أخرى في وهران، مما وفّر علينا وقتاً وجهداً كبيرين.</p>
+                <div class="testimonial-author"><div class="author-avatar">م</div><div class="author-info"><span class="author-name">محمد بن علي</span><span class="author-role">مدير جمعية - وهران</span></div></div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                <p class="testimonial-text">طلبت مساعدة عبر المنصة وتم توجيهي للجمعية الأنسب في قسنطينة خلال ساعات فقط.</p>
+                <div class="testimonial-author"><div class="author-avatar">س</div><div class="author-info"><span class="author-name">سارة بوزيان</span><span class="author-role">مستفيدة - قسنطينة</span></div></div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                <p class="testimonial-text">تطوّعت في توزيع سلال غذائية عبر المنصة. التنظيم كان ممتازاً والفرق واضح.</p>
+                <div class="testimonial-author"><div class="author-avatar">خ</div><div class="author-info"><span class="author-name">خالد مرابط</span><span class="author-role">متطوع - عنابة</span></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="newsletter-section" id="newsletter">
+    <div class="container">
+        <div class="section-header">
+            <h2>اشترك في نشرتنا</h2>
+            <p>كن أول من يعرف عن الفرص الجديدة والفعاليات القادمة في ولايتك</p>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('تم الاشتراك بنجاح!'); this.reset();">
+            <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+            <button type="submit">اشترك <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </div>
+</section>
+
+<section id="suggestions">
+    <div class="container">
+        <div class="section-header">
+            <h2>قدّم اقتراحاً لنا</h2>
+            <p>رأيك يهمنا لتطوير المنصة وخدمة الجميع بشكل أفضل</p>
+        </div>
+        <div class="form-container">
+            <form class="glass-form suggestion-form" onsubmit="event.preventDefault(); alert('شكراً لاقتراحك!'); this.reset();">
+                <div class="form-group">
+                    <label class="form-label">الاسم (اختياري)</label>
+                    <input type="text" class="form-control" placeholder="اسمك الكريم">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">البريد الإلكتروني (اختياري)</label>
+                    <input type="email" class="form-control" placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">نوع الاقتراح *</label>
+                    <select class="form-control" required>
+                        <option value="">اختر النوع...</option>
+                        <option>تحسين في المنصة</option>
+                        <option>ميزة جديدة</option>
+                        <option>مشكلة تقنية</option>
+                        <option>اقتراح عام</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">اقتراحك *</label>
+                    <textarea class="form-control" rows="5" required placeholder="اكتب اقتراحك هنا..."></textarea>
+                </div>
+                <button type="submit" class="button primary-btn" style="width: 100%;">إرسال الاقتراح <i class="fa-solid fa-lightbulb"></i></button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-logo">
+            <img src="assets/logo.png" alt="وصْل">
+        </div>
+        <p>&copy; <span id="current-year"></span> منصة وصْل - الجزائر. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+
+<script src="index/index.js"></script>
+</body>
+</html>

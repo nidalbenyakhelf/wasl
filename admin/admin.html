@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#181d25">
+    <title>وصْل | لوحة الإدارة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+<div id="loginPage" class="login-page">
+    <div class="glass-form" style="max-width:400px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:2rem;">
+            <img src="../assets/logo.png" alt="وصْل" style="height: 60px; margin-bottom: 1rem;">
+            <h2 style="color:#fff;">تسجيل دخول الإدارة</h2>
+            <p style="color:#94a3b8;font-size:0.9rem;">أدخل بيانات الدخول للوصول إلى لوحة التحكم</p>
+        </div>
+        <form id="loginForm">
+            <div class="form-group"><label class="form-label">اسم المستخدم</label><input type="text" class="form-control" id="username" required></div>
+            <div class="form-group"><label class="form-label">كلمة المرور</label><input type="password" class="form-control" id="password" required></div>
+            <div id="loginError" style="background:rgba(239,68,68,0.1);color:#ef4444;padding:0.75rem;border-radius:8px;margin-bottom:1rem;display:none;font-size:0.85rem;text-align:center;">بيانات الدخول غير صحيحة</div>
+            <button type="submit" class="button primary-btn" style="width:100%;">دخول</button>
+        </form>
+        <div style="text-align:center;margin-top:1.5rem;"><a href="../index.html" style="color:#94a3b8;font-size:0.85rem;">العودة للرئيسية</a></div>
+    </div>
+</div>
+
+<div id="dashboard" style="display:none;">
+    <header>
+        <div class="btn-group-header"><button data-toggle="profileList"><i class="fa fa-bars"></i></button></div>
+        <a href="../index.html" class="mainLogo"><img src="../assets/logo.png" alt="وصْل"></a>
+        <div class="popup profileList">
+            <div class="header"><img src="../assets/logo.png" alt="وصْل"><button class="btnClose" data-close><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="main">
+                <a href="../index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                <a href="../needy/needy.html"><i class="fa-solid fa-hand-holding-heart"></i> المحتاجين</a>
+                <a href="../volunteers/volunteers.html"><i class="fa-solid fa-users"></i> المتطوعين</a>
+                <a href="../associations/associations.html"><i class="fa-solid fa-building-ngo"></i> الجمعيات</a>
+                <a href="admin.html"><i class="fa-solid fa-shield-halved"></i> الإدارة</a>
+            </div>
+        </div>
+    </header>
+
+    <main style="min-height: auto; padding-top: 120px; padding-bottom: 4rem; background: linear-gradient(to bottom, rgb(24, 29, 37), rgb(15, 19, 25));">
+        <div class="container">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3rem;flex-wrap:wrap;gap:1rem;">
+                <div><h2 style="font-size:2rem;color:#fff;">لوحة التحكم</h2><p style="color:#94a3b8;">نظرة عامة على أداء المنصة</p></div>
+                <button class="button" style="width:auto;height:2.5rem;font-size:0.9rem;background:rgba(239,68,68,0.1);color:#ef4444;border-color:rgba(239,68,68,0.3);" onclick="logout()">خروج</button>
+            </div>
+
+            <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1.5rem;margin-bottom:3rem;">
+                <div class="glass-form" style="padding:1.5rem;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#00f5a0;">1,245</div><div style="color:#94a3b8;">إجمالي المستخدمين</div></div>
+                <div class="glass-form" style="padding:1.5rem;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#3b82f6;">48</div><div style="color:#94a3b8;">الجمعيات المفعلة</div></div>
+                <div class="glass-form" style="padding:1.5rem;text-align:center;"><div style="font-size:2rem;font-weight:800;color:#22c55e;">892</div><div style="color:#94a3b8;">طلبات مكتملة</div></div>
+            </div>
+
+            <div class="glass-form">
+                <h3 style="color:#fff;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem;"><i class="fa-solid fa-clock" style="color:#f97316;"></i> طلبات الانضمام المعلقة</h3>
+                <div style="overflow-x:auto;">
+                    <table style="width:100%;border-collapse:collapse;color:#cbd5e1;">
+                        <thead><tr style="border-bottom:1px solid rgba(255,255,255,0.1);text-align:right;"><th style="padding:1rem;">الجمعية</th><th style="padding:1rem;">الرقم</th><th style="padding:1rem;">التاريخ</th><th style="padding:1rem;">الحالة</th><th style="padding:1rem;">إجراء</th></tr></thead>
+                        <tbody id="pendingTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-logo"><img src="../assets/logo.png" alt="وصْل"></div>
+            <p>&copy; 2026 منصة وصْل - الجزائر. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

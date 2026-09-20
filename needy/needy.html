@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#181d25">
+    <title>وصْل | طلب مساعدة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="needy.css" />
+</head>
+<body>
+
+<header>
+    <div class="btn-group-header"><button data-toggle="profileList"><i class="fa fa-bars"></i></button></div>
+    <a href="../index.html" class="mainLogo"><img src="../assets/logo.png" alt="وصْل"></a>
+    <div class="popup profileList">
+        <div class="header"><img src="../assets/logo.png" alt="وصْل"><button class="btnClose" data-close><i class="fa-solid fa-xmark"></i></button></div>
+        <div class="main">
+            <a href="../index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+            <a href="needy.html"><i class="fa-solid fa-hand-holding-heart"></i> المحتاجين</a>
+            <a href="../volunteers/volunteers.html"><i class="fa-solid fa-users"></i> المتطوعين</a>
+            <a href="../associations/associations.html"><i class="fa-solid fa-building-ngo"></i> الجمعيات</a>
+            <a href="../admin/admin.html"><i class="fa-solid fa-shield-halved"></i> الإدارة</a>
+        </div>
+    </div>
+</header>
+
+<main style="min-height: auto; padding-top: 120px; padding-bottom: 4rem; background: linear-gradient(to bottom, rgb(24, 29, 37), rgb(15, 19, 25));">
+    <div class="container">
+        <div class="section-header" style="margin-bottom: 3rem;">
+            <h2>طلب مساعدة</h2>
+            <p>اختر الطريقة الأنسب لك - نحن هنا لمساعدتك</p>
+        </div>
+
+        <!-- خيارات الاتصال السريع -->
+        <div style="max-width: 700px; margin: 0 auto 3rem;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="quick-options">
+                <a href="tel:+213555123456" class="quick-option" style="background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); border-radius: 16px; padding: 1.5rem; text-align: center; text-decoration: none; color: #fff; transition: all 0.3s;">
+                    <i class="fa-solid fa-phone" style="font-size: 2rem; color: #22c55e; margin-bottom: 0.5rem;"></i>
+                    <div style="font-weight: 700; font-size: 1.1rem;">اتصال مباشر</div>
+                    <div style="color: #94a3b8; font-size: 0.85rem; margin-top: 0.3rem;">اتصل بنا الآن</div>
+                </a>
+                <a href="https://wa.me/213555123456" target="_blank" class="quick-option" style="background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.3); border-radius: 16px; padding: 1.5rem; text-align: center; text-decoration: none; color: #fff; transition: all 0.3s;">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 2rem; color: #25d366; margin-bottom: 0.5rem;"></i>
+                    <div style="font-weight: 700; font-size: 1.1rem;">واتساب</div>
+                    <div style="color: #94a3b8; font-size: 0.85rem; margin-top: 0.3rem;">راسلنا عبر واتساب</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- زر الطوارئ -->
+        <div style="max-width: 700px; margin: 0 auto 3rem; text-align: center;">
+            <div style="background: rgba(239,68,68,0.1); border: 2px solid rgba(239,68,68,0.3); border-radius: 16px; padding: 2rem;">
+                <i class="fa-solid fa-triangle-exclamation" style="font-size: 2.5rem; color: #ef4444; margin-bottom: 1rem;"></i>
+                <h3 style="color: #fff; margin-bottom: 0.5rem;">حالة طوارئ؟</h3>
+                <p style="color: #94a3b8; margin-bottom: 1.5rem; font-size: 0.95rem;">إذا كنت في حالة طارئة ولا تستطيع ملء النموذج</p>
+                <a href="tel:+213555123456" class="button" style="background: rgba(239,68,68,0.2); border-color: #ef4444; color: #ef4444; width: auto; padding: 0 2rem; display: inline-flex;">
+                    <i class="fa-solid fa-phone"></i> اتصل بالطوارئ
+                </a>
+            </div>
+        </div>
+
+        <!-- نموذج طلب المساعدة -->
+        <div class="form-container">
+            <div class="glass-form">
+                <h3 style="color: #fff; margin-bottom: 0.5rem; text-align: center;"><i class="fa-solid fa-file-lines" style="color: #00f5a0;"></i> نموذج طلب المساعدة</h3>
+                <p style="color: #94a3b8; text-align: center; margin-bottom: 2rem; font-size: 0.9rem;">جميع البيانات سرية ولن تُشارك إلا مع الجهات المعتمدة</p>
+                
+                <form id="helpForm">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label class="form-label">الاسم الكامل *</label>
+                            <input type="text" class="form-control" required placeholder="الاسم الثلاثي">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">رقم الهاتف *</label>
+                            <input type="tel" class="form-control" required placeholder="05xxxxxxxx">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label class="form-label">الولاية *</label>
+                            <select class="form-control" required>
+                                <option value="">اختر الولاية...</option>
+                                <option>الجزائر العاصمة</option>
+                                <option>وهران</option>
+                                <option>قسنطينة</option>
+                                <option>عنابة</option>
+                                <option>سطيف</option>
+                                <option>باتنة</option>
+                                <option>بليدة</option>
+                                <option>تلمسان</option>
+                                <option>بجاية</option>
+                                <option>تيزي وزو</option>
+                                <option>الجلفة</option>
+                                <option>سكيكدة</option>
+                                <option>مستغانم</option>
+                                <option>بسكرة</option>
+                                <option>تيارت</option>
+                                <option>تيبازة</option>
+                                <option>بومرداس</option>
+                                <option>أدرار</option>
+                                <option>الأغواط</option>
+                                <option>غرداية</option>
+                                <option>ورقلة</option>
+                                <option>تندوف</option>
+                                <option>عين الدفلى</option>
+                                <option>المدية</option>
+                                <option>المسيلة</option>
+                                <option>خنشلة</option>
+                                <option>سوق أهراس</option>
+                                <option>تيسمسيلت</option>
+                                <option>الوادي</option>
+                                <option>قالمة</option>
+                                <option>عين تموشنت</option>
+                                <option>غليزان</option>
+                                <option>النعامة</option>
+                                <option>تيميمون</option>
+                                <option>برج باجي مختار</option>
+                                <option>أولاد جلال</option>
+                                <option>بني عباس</option>
+                                <option>إن صالح</option>
+                                <option>إن قزام</option>
+                                <option>تقرت</option>
+                                <option>جانت</option>
+                                <option>المغير</option>
+                                <option>المنيعة</option>
+                                <option>تيميمون</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">نوع المساعدة *</label>
+                            <select class="form-control" required>
+                                <option value="">اختر النوع...</option>
+                                <option>مساعدات غذائية</option>
+                                <option>كسوة وملابس</option>
+                                <option>مساعدات طبية</option>
+                                <option>مساعدات مالية</option>
+                                <option>أدوية</option>
+                                <option>مساعدات تعليمية</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">درجة الاستعجال *</label>
+                        <select class="form-control" required>
+                            <option value="">اختر الدرجة...</option>
+                            <option>🔴 عاجل جداً - حالة طارئة</option>
+                            <option>🟠 عاجل - خلال أيام</option>
+                            <option>🟡 عادي - خلال أسابيع</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">تفاصيل الحالة (اختياري)</label>
+                        <textarea class="form-control" rows="4" placeholder="اشرح حالتك باختصار..."></textarea>
+                    </div>
+                    <button type="submit" class="button primary-btn" style="width: 100%;">إرسال الطلب <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-logo"><img src="../assets/logo.png" alt="وصْل"></div>
+        <p>&copy; 2026 منصة وصْل - الجزائر. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+
+<script src="needy.js"></script>
+</body>
+</html>

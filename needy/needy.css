@@ -1,0 +1,4 @@
+.quick-option:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+@media (max-width: 767px) {
+    .quick-options { grid-template-columns: 1fr !important; }
+}

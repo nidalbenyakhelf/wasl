@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#181d25">
+    <title>وصْل | التطوع</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="volunteers.css" />
+</head>
+<body>
+
+<header>
+    <div class="btn-group-header"><button data-toggle="profileList"><i class="fa fa-bars"></i></button></div>
+    <a href="../index.html" class="mainLogo"><img src="../assets/logo.png" alt="وصْل"></a>
+    <div class="popup profileList">
+        <div class="header"><img src="../assets/logo.png" alt="وصْل"><button class="btnClose" data-close><i class="fa-solid fa-xmark"></i></button></div>
+        <div class="main">
+            <a href="../index.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+            <a href="../needy/needy.html"><i class="fa-solid fa-hand-holding-heart"></i> المحتاجين</a>
+            <a href="volunteers.html"><i class="fa-solid fa-users"></i> المتطوعين</a>
+            <a href="../associations/associations.html"><i class="fa-solid fa-building-ngo"></i> الجمعيات</a>
+            <a href="../admin/admin.html"><i class="fa-solid fa-shield-halved"></i> الإدارة</a>
+        </div>
+    </div>
+</header>
+
+<main style="min-height: auto; padding-top: 120px; padding-bottom: 4rem; background: linear-gradient(to bottom, rgb(24, 29, 37), rgb(15, 19, 25));">
+    <div class="container">
+        <div class="section-header">
+            <h2>طرق التطوع</h2>
+            <p>اختر الطريقة التي تناسبك - كل مساهمة تصنع فرقاً</p>
+        </div>
+
+        <!-- خياران رئيسيان -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 800px; margin: 0 auto 4rem;" class="volunteer-types">
+            <div class="volunteer-type-card" onclick="showSection('services')" style="background: rgba(0,245,160,0.05); border: 2px solid rgba(0,245,160,0.2); border-radius: 20px; padding: 2.5rem; text-align: center; cursor: pointer; transition: all 0.3s;">
+                <i class="fa-solid fa-hand-holding-heart" style="font-size: 3rem; color: #00f5a0; margin-bottom: 1rem;"></i>
+                <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">تطوع بخدماتك</h3>
+                <p style="color: #94a3b8; font-size: 0.95rem;">قدم وقتك ومهاراتك</p>
+                <div style="margin-top: 1rem; color: #00f5a0; font-weight: 700;">اضغط هنا <i class="fa-solid fa-arrow-left"></i></div>
+            </div>
+            <div class="volunteer-type-card" onclick="showSection('donations')" style="background: rgba(0,217,245,0.05); border: 2px solid rgba(0,217,245,0.2); border-radius: 20px; padding: 2.5rem; text-align: center; cursor: pointer; transition: all 0.3s;">
+                <i class="fa-solid fa-box-open" style="font-size: 3rem; color: #00d9f5; margin-bottom: 1rem;"></i>
+                <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem;">تبرع بمواد</h3>
+                <p style="color: #94a3b8; font-size: 0.95rem;">قدم مالاً أو مواد عينية</p>
+                <div style="margin-top: 1rem; color: #00d9f5; font-weight: 700;">اضغط هنا <i class="fa-solid fa-arrow-left"></i></div>
+            </div>
+        </div>
+
+        <!-- قسم الخدمات -->
+        <div id="servicesSection" style="display: none;">
+            <div class="section-header">
+                <h2>تطوع بخدماتك</h2>
+                <p>اختر الخدمة التي تستطيع تقديمها</p>
+            </div>
+            <div class="categories-grid" style="max-width: 900px; margin: 0 auto;">
+                <div class="category-card cat-green" onclick="selectService('الطبخ')">
+                    <i class="fa-solid fa-utensils card-bg-icon"></i>
+                    <h3>الطبخ</h3>
+                    <small>تحضير وجبات للمحتاجين</small>
+                </div>
+                <div class="category-card cat-blue" onclick="selectService('القيادة والتوصيل')">
+                    <i class="fa-solid fa-car card-bg-icon"></i>
+                    <h3>القيادة والتوصيل</h3>
+                    <small>نقل الأشخاص أو المواد</small>
+                </div>
+                <div class="category-card cat-orange" onclick="selectService('الخياطة')">
+                    <i class="fa-solid fa-scissors card-bg-icon"></i>
+                    <h3>الخياطة</h3>
+                    <small>تفصيل وإصلاح الملابس</small>
+                </div>
+                <div class="category-card cat-purple" onclick="selectService('المساعدة المنزلية')">
+                    <i class="fa-solid fa-house-chimney card-bg-icon"></i>
+                    <h3>المساعدة المنزلية</h3>
+                    <small>مساعدة كبار السن والمرضى</small>
+                </div>
+                <div class="category-card cat-teal" onclick="selectService('التعليم والدروس')">
+                    <i class="fa-solid fa-chalkboard-user card-bg-icon"></i>
+                    <h3>التعليم والدروس</h3>
+                    <small>دعم دراسي للأطفال</small>
+                </div>
+                <div class="category-card cat-red" onclick="selectService('الرعاية الصحية')">
+                    <i class="fa-solid fa-stethoscope card-bg-icon"></i>
+                    <h3>الرعاية الصحية</h3>
+                    <small>فحوصات طبية مجانية</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم التبرعات المادية -->
+        <div id="donationsSection" style="display: none;">
+            <div class="section-header">
+                <h2>تبرع بمواد</h2>
+                <p>اختر نوع التبرع المادي</p>
+            </div>
+            <div class="categories-grid" style="max-width: 900px; margin: 0 auto;">
+                <div class="category-card cat-green" onclick="selectDonation('ملابس')">
+                    <i class="fa-solid fa-shirt card-bg-icon"></i>
+                    <h3>ملابس</h3>
+                    <small>ملابس جديدة أو مستعملة بحالة جيدة</small>
+                </div>
+                <div class="category-card cat-orange" onclick="selectDonation('مواد غذائية')">
+                    <i class="fa-solid fa-basket-shopping card-bg-icon"></i>
+                    <h3>مواد غذائية</h3>
+                    <small>أغذية معلبة وجافة</small>
+                </div>
+                <div class="category-card cat-blue" onclick="selectDonation('أدوية')">
+                    <i class="fa-solid fa-pills card-bg-icon"></i>
+                    <h3>أدوية</h3>
+                    <small>أدوية غير منتهية الصلاحية</small>
+                </div>
+                <div class="category-card cat-purple" onclick="selectDonation('أجهزة كهربائية')">
+                    <i class="fa-solid fa-plug card-bg-icon"></i>
+                    <h3>أجهزة كهربائية</h3>
+                    <small>أجهزة تعمل بحالة جيدة</small>
+                </div>
+                <div class="category-card cat-teal" onclick="selectDonation('أثاث منزلي')">
+                    <i class="fa-solid fa-couch card-bg-icon"></i>
+                    <h3>أثاث منزلي</h3>
+                    <small>أثاث بحالة جيدة</small>
+                </div>
+                <div class="category-card cat-red" onclick="selectDonation('مساهمة مالية')">
+                    <i class="fa-solid fa-money-bill-wave card-bg-icon"></i>
+                    <h3>مساهمة مالية</h3>
+                    <small>تبرع نقدي</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- نموذج التسجيل -->
+        <div id="registrationForm" style="display: none; max-width: 600px; margin: 4rem auto 0;">
+            <div class="glass-form">
+                <h3 style="color: #fff; margin-bottom: 0.5rem; text-align: center;"><i class="fa-solid fa-user-plus" style="color: #00f5a0;"></i> معلومات التطوع</h3>
+                <p style="color: #94a3b8; text-align: center; margin-bottom: 2rem; font-size: 0.9rem;" id="formSubtitle">أدخل بياناتك للتسجيل</p>
+                
+                <form id="volunteerForm">
+                    <div class="form-group">
+                        <label class="form-label">الاسم الكامل *</label>
+                        <input type="text" class="form-control" required placeholder="الاسم الثلاثي">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">رقم الهاتف *</label>
+                        <input type="tel" class="form-control" required placeholder="05xxxxxxxx">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">الولاية *</label>
+                        <select class="form-control" required>
+                            <option value="">اختر الولاية...</option>
+                            <option>الجزائر العاصمة</option>
+                            <option>وهران</option>
+                            <option>قسنطينة</option>
+                            <option>عنابة</option>
+                            <option>سطيف</option>
+                            <option>باتنة</option>
+                            <option>بليدة</option>
+                            <option>تلمسان</option>
+                            <option>بجاية</option>
+                            <option>تيزي وزو</option>
+                            <option>الجلفة</option>
+                            <option>سكيكدة</option>
+                            <option>مستغانم</option>
+                            <option>بسكرة</option>
+                            <option>تيارت</option>
+                            <option>تيبازة</option>
+                            <option>بومرداس</option>
+                            <option>أدرار</option>
+                            <option>الأغواط</option>
+                            <option>غرداية</option>
+                            <option>ورقلة</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">نوع التطوع *</label>
+                        <input type="text" class="form-control" id="selectedType" readonly style="background: rgba(0,245,160,0.1); border-color: rgba(0,245,160,0.3);">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ملاحظات إضافية (اختياري)</label>
+                        <textarea class="form-control" rows="3" placeholder="أي معلومات إضافية..."></textarea>
+                    </div>
+                    <button type="submit" class="button primary-btn" style="width: 100%;">تأكيد التطوع <i class="fa-solid fa-check"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-logo"><img src="../assets/logo.png" alt="وصْل"></div>
+        <p>&copy; 2026 منصة وصْل - الجزائر. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+
+<script src="volunteers.js"></script>
+</body>
+</html>
